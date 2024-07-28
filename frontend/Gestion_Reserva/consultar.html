@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reservas</title>
+<link rel="stylesheet" href="../css/styleRconsult.css">
+</head>
+<body>
+    <header>
+        <div class="logo" href="../Menus/Cliente.html">
+            <img src="../img/logo.png" alt="Logo Parceritos Fieles">
+        </div>
+        <nav>
+            <div class="nav">
+                <div class="dropdown">
+                    <a href="#">Mascotas</a>
+                    <div class="dropdown-content">
+                        <a href="#">Registrar</a>
+                        <a href="#">Consultar</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Reservas</a>
+                    <div class="dropdown-content">
+                        <a href="crear.html">Registrar</a>
+                        <a href="consultar.html">Consultar</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Quejas</a>
+                    <div class="dropdown-content">
+                        <a href="#">Registrar</a>
+                        <a href="#">Actualizar</a>
+                        <a href="#">Consultar</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="#">Perfil</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="content">
+                <h2>Reservas</h2>
+                <p>Estas son las últimas reservas que has hecho</p>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Hora</th>
+                                <th>Celular</th>
+                                <th>Correo</th>
+                                <th>Mascota</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="reservasTableBody">
+                            <!-- Las reservas se cargarán aquí dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Parceritos Fieles</p>
+        <ul class="social-media">
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        </ul>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const reservas = JSON.parse(localStorage.getItem('reservas')) || [];
+            const reservasTableBody = document.getElementById('reservasTableBody');
+
+            reservas.forEach((reserva, index) => {
+                const row = document.createElement('tr');
+
+                row.innerHTML = `
+                    <td>${reserva.fecha}</td>
+                    <td>${reserva.hora}</td>
+                    <td>${reserva.celular}</td>
+                    <td>${reserva.correo}</td>
+                    <td>${reserva.mascota}</td>
+                    <td><button onclick="cancelarReserva(${index})">Cancelar</button></td>
+                `;
+
+                reservasTableBody.appendChild(row);
+            });
+        });
+
+        function cancelarReserva(index) {
+            let reservas = JSON.parse(localStorage.getItem('reservas')) || [];
+            reservas.splice(index, 1);
+            localStorage.setItem('reservas', JSON.stringify(reservas));
+            window.location.reload();
+        }
+    </script>
+</body>
+</html>
