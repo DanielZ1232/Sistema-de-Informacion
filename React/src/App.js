@@ -4,6 +4,7 @@ import Index from './Paginas/index';
 import Login from './Paginas/login/login';
 import Registrar from './Paginas/Registrar/registrar';
 import MenuCliente from './Paginas/cliente/menú'
+import MenuGerente from './Paginas/gerente/MenuGerente';
 
 const App = () => {
     return (
@@ -14,6 +15,7 @@ const App = () => {
                     <Route path="/login" element={<Login/>} />
                     <Route path="/registrar" element={<Registrar/>} />
                     <Route path="/menu" element={<MenuCliente/>} />
+                    <Route path='/menuGerente' element={<MenuGerente/>}/>
                 </Routes>
         </Router>
     );

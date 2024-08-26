@@ -11,6 +11,18 @@
       "NumeroDocumento": "1127615970",
       "Contraseña": "DanielZ0905",
       "Rol": "Cliente"
+    },
+    {
+      "id": "1724620520378",
+      "Nombre": "Miguel ",
+      "Apellido": "Uran",
+      "Correo": "migueluran597@gmail.com",
+      "Celular": "3506842198",
+      "Direccion": "kr 114 # 152-d12",
+      "TipoDocumento": "CC",
+      "NumeroDocumento": "1019029870",
+      "Contraseña": "123456",
+      "Rol": "Gerente"
     }
   ],
   "Reservas": [],

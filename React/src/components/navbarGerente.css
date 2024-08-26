@@ -1,0 +1,74 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 70px; /* Ajusta según lo necesites */
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    position: relative;
+    margin-left: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    color: #000;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a {
+    padding: 5px 10px;
+    display: block;
+    color: #333;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Mostrar el menú desplegable solo cuando el estado lo permita */
+.dropdown.open .dropdown-menu,
+.dropdown:hover .dropdown-menu {
+    display: block;
+}

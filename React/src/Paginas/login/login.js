@@ -35,7 +35,7 @@ const Login = () => {
                         navigate('/empleado'); // Cambia esto a la ruta correcta para el Empleado
                         break;
                     case 'Gerente':
-                        navigate('/gerente'); // Cambia esto a la ruta correcta para el Gerente
+                        navigate('/menuGerente'); // Cambia esto a la ruta correcta para el Gerente
                         break;
                     default:
                         alert('Rol desconocido');
