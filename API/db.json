@@ -10,7 +10,7 @@
       "TipoDocumento": "CC",
       "NumeroDocumento": "1127615970",
       "Contraseña": "DanielZ0905",
-      "Rol": "Cliente"
+      "Rol": "Empleado"
     },
     {
       "id": "1724620520378",
@@ -24,7 +24,52 @@
       "Contraseña": "123456",
       "Rol": "Gerente"
     }
+
   ],
-  "Reservas": [],
-  "Mascotas": []
+
+  "Reservas": [
+    {
+      "id": "1724617958266",
+      "Fecha": "2024-08-25",
+      "HoraInicio": "09:00",
+      "HoraFinal": "10:00",
+      "Celular": "123456789",
+      "Correo": "cliente@example.com",
+      "Mascota": "Bella",
+      "Estado": "Confirmada"
+    }
+  ],
+  "Mascotas": [
+    {
+      "id": "5a96",
+      "nombre": "pan",
+      "raza": "mestizo",
+      "enfermedades": "no tiene",
+      "peso": "23 kg",
+      "edad": "1",
+      "sexo": "masculino",
+      "esterilizado": "si"
+    },
+    {
+      "id": "4998",
+      "nombre": "pan",
+      "raza": "mestizo",
+      "enfermedades": "no tiene",
+      "peso": "23 kg",
+      "edad": "1",
+      "sexo": "masculino",
+      "esterilizado": "si"
+    },
+    {
+      "id": "e836",
+      "nombre": "miguel",
+      "raza": "dormilon",
+      "enfermedades": "adicto a las empanadas",
+      "peso": "10 kg",
+      "edad": "13",
+      "sexo": "femenino",
+      "esterilizado": "no"
+    }
+  ],
+    "Quejas": []
 }

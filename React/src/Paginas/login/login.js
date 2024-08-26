@@ -13,7 +13,7 @@ const Login = () => {
 
         try {
             const respuesta = await axios.get('http://localhost:3002/Usuarios/');
-            const usuarios = respuesta.data;
+            const usuarios = respuesta.data; // Accede a la propiedad correcta
 
             // Verificar si el usuario existe y si la contraseña es correcta
             const usuario = usuarios.find(
@@ -25,6 +25,7 @@ const Login = () => {
 
                 // Guardar el ID del usuario en localStorage
                 localStorage.setItem('usuarioId', usuario.id);
+                console.log('ID del usuario guardado en localStorage:', usuario.id);
 
                 // Redirigir basado en el rol del usuario
                 switch (usuario.Rol) {
@@ -32,7 +33,7 @@ const Login = () => {
                         navigate('/menu'); // Cambia esto a la ruta correcta para el Cliente
                         break;
                     case 'Empleado':
-                        navigate('/empleado'); // Cambia esto a la ruta correcta para el Empleado
+                        navigate('/menuEmpleado'); // Cambia esto a la ruta correcta para el Empleado
                         break;
                     case 'Gerente':
                         navigate('/menuGerente'); // Cambia esto a la ruta correcta para el Gerente
